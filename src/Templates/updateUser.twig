@@ -1,0 +1,78 @@
+{% extends 'layouts/head.twig' %}
+{% block content %}
+    <section id="content" class="table-layout animated fadeIn">
+        <div class="container-fluid">
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    &nbsp;
+                </div>
+                <div class="col-md-6 center-block">
+                    <div class="f-center">
+                        <i class="imoon imoon-5x imoon-libreoffice"></i>
+                        <h1> Update User</h1>
+                        <p>Please verify before execute !</p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="panel" style="border:6px solid rgba(204, 204, 204,0.5)">
+                        <div class="panel-heading">
+                            <span class="panel-title"><i class="imoon imoon-quill"></i> Input Informations</span>
+                        </div>
+                        <div class="panel-body">
+                            <form method="post" class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-lg-12">
+                                        <span class="append-icon right"></span>
+                                        <input type="text" class="form-control" name="full-name"  placeholder="Full Name" value="{{ infoUser.name }}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-lg-12">
+                                        <span class="append-icon right"></span>
+                                        <input type="text" class="form-control" name="user-name" placeholder="Username" value="{{ infoUser.username }}" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-lg-12">
+                                        <span class="append-icon right"></span>
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="">
+                                    </div>
+                                </div>
+                                <div class="checkbox-custom checkbox-system mb5">
+                                    <input type="checkbox" id="showPassword" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'">
+                                    <label for="showPassword">Show Password</label>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-lg-12">
+                                        <label for="role" aria-hidden="true"></label>
+                                        <select id="role" name="role" required="required" class="form-control">
+                                            <option value="" selected="selected">Choose Role</option>
+                                            <option value="0">0 - Owner</option>            <option value="1">1 - Vendor</option>
+                                            <option value="2">2 - Documentation</option>            <option value="3">3 - Engineer</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-bottom:0 !important;">
+                                    <div class="col-lg-12">
+                                        <input type="submit" value="Update Profile" class="btn btn-primary btn-block btn-flat">
+                                    </div>
+                                </div>
+                        </div>
+                        </form>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                &nbsp;
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+{% endblock %}

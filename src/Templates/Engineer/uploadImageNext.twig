@@ -1,0 +1,137 @@
+{% extends 'layouts/head.twig' %}
+
+{% block content %}
+
+    <section id="content" class="table-layout animated fadeIn borderedBackground">
+        <div class="container-fluid">
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    &nbsp;
+                </div>
+                <div class="col-md-6 center-block">
+                    <div class="f-center">
+                        <i class="imoon imoon-5x imoon-libreoffice"></i>
+                        <h1> Upload Image Outdoor</h1>
+                        <p>Please verify before execute !</p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="panel" style="border:6px solid rgba(204, 204, 204,0.5)">
+                        <div class="panel-heading">
+                            <span class="panel-title"><i class="imoon imoon-quill"></i> Input Informations</span>
+                        </div>
+                        <div class="panel-body">
+                            <form method="post" enctype="multipart/form-data">
+                                {#{{ form_start(form, {'method': 'POST', 'action': 'uploadImageAfter','attr': {'class': 'form-horizontal'}}) }}#}
+
+                                <div class="input-group form-control">
+                                    <label class="left">1. Site Location : Photo of Overall Site View ( Zoom Out ).</label>
+                                    <div class="input-group">
+                                      {{ form_row(form.siteLocation) }}
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="input-group form-control">
+                                    <label class="left">2. GPS Coordinate : Photo of GPS showing Longitude and Lattitude on site</label>
+                                    <div class="input-group">
+                                       {{ form_row(form.gpsCoordinate) }}
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="input-group form-control">
+                                    <label class="left">3. Cabinet And Tower : Photo of site compound showing cabinet &amp; tower.</label>
+                                    <div class="input-group">
+                                       {{ form_row(form.cabinetTower) }}
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="input-group form-control">
+                                    <label class="left">4. BTS Cabinet : Photo of overall BTS Close Door and Open Door (Cabinet showing all modules)</label>
+                                    <div class="input-group">
+                                        {{ form_row(form.btsCabinetOne) }}
+                                        <br>
+                                        {{ form_row(form.btsCabinetTwo) }}
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="input-group form-control">
+                                    <label class="left">5. Overview of inside the cabinet : Photo of overall BTS cabinet showing all modules</label>
+                                    <div class="input-group">
+                                        {{ form_row(form.overviewInsideSatu) }}
+                                        <br>
+                                        {{ form_row(form.overviewInsideDua) }}
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="input-group form-control">
+                                    <label class="left">6. FEP from Outside Cabinet : Photo of FEP from outside of cabinet (jumper
+                                        bottom must installed first &amp; Use Macro Mode).</label>
+                                    <div class="input-group">
+                                       {{ form_row(form.fepOutside) }}
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="input-group form-control">
+                                    <label class="left">7. Jumper Installation Outdoor Cabinet : Photo of jumper bottom installation including labels, and connection between jumper &amp; feeder.</label>
+                                    <div class="input-group">
+                                        {{ form_row(form.jumperInstallation) }}
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="input-group form-control">
+                                    <label class="left">8. Feeder Bending : Photo of feeder bending at horizontal &amp; vertical tray. (Side view)</label>
+                                    <div class="input-group">
+                                        {{ form_row(form.feederBending) }}
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="input-group form-control">
+                                    <label class="left">9. EGB at Horizontal Tray : Photo of external grounding bar at horizontal tray, including the grounding cable connections and labels.</label>
+                                    <div class="input-group">
+                                        {{ form_row(form.egbHorizontal) }}
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="input-group form-control">
+                                    <label class="left">10. ACPDB Internal View : Photo of ACPDB, door of ACPDB must be open.</label>
+                                    <div class="input-group">
+                                        {{ form_row(form.acpdbInternalSatu) }}
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="input-group form-control">
+                                    <label>11. MCB at Acpdb : Photo of rectifier MCB ratings in ACPDB. (Macro mode)</label>
+                                    <div class="input-group">
+                                        {{ form_row(form.mcbAtAcpdb) }}
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="input-group form-control">
+                                    <label>12. Rectifier : Photo of rectifier. Rectifier’ door must be opened</label>
+                                    <div class="input-group">
+                                        {{ form_row(form.rectifierOne) }}
+                                        <br>
+                                        {{ form_row(form.rectifierTwo) }}
+                                    </div>
+                                </div>
+                                <div class="input-group form-control">
+                                    <label>13. MCB at Rectifier Cabinet : Photo of the all the MCB in rectifier including labels. (Macro mode)</label>
+                                    <div class="input-group">
+                                        {{ form_row(form.mcbAtRectifierCabinet) }}
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-bottom:0 !important;">
+                                    <div class="col-lg-12">
+                                        {{ form_row(form.kirim) }}
+                                    </div>
+                                </div>
+
+                                {#{{ form_end(form) }}#}
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

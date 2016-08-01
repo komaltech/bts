@@ -1,0 +1,436 @@
+{% extends 'layouts/head.twig' %}
+{% block customCSS %}
+{% endblock %}
+{% block content %}
+    <section id="content" class="table-layout animated fadeIn borderedBackground">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-11 center-block">
+                    <div class="col-md-12">
+                        <br>
+                        <a href="#top" title="back to top" style="position:fixed;right:20px; bottom:75px" class="btn btn-primary"><i class="fa fa-chevron-up"></i></a>
+                        <div class="col-md-2 pull-right">
+
+                        </div>
+                        <br>
+                        <br>
+                        {#{{ dump(formState) }}#}
+                        <div style="padding:30px 10px 10px 10px;background-color: #fff;margin-top: 10px;border:6px solid rgba(204, 204, 204,0.5)">
+                            <div class="panel panel-visible" id="spy2">
+                                <div class="panel-body pn">
+                                    <div id="printed-area">
+                                        <div id="">
+                                            <style type="text/css">
+                                                #proses {
+                                                    border:1px solid #000;
+                                                }
+                                                .b1{
+                                                    border:1px solid #000;
+                                                }
+                                                .logo-kanan{
+                                                    float:right;
+                                                    margin:50px 100px 0 0;
+                                                }
+                                                .logo-kiri{
+                                                    float:left;
+                                                    margin:50px 0 0 100px;
+                                                }
+                                                .logo-kiri-atas {
+                                                    float:left;
+                                                    margin:50px 0 0 50px;
+                                                }
+
+                                                .logo-kanan-atas {
+                                                    float:right;
+                                                    margin:50px 50px 0 0;
+                                                }
+                                                .f1{
+                                                    font-size: 4em;
+                                                }
+                                                .secPrint {
+                                                    min-width: 793.700787402px;
+                                                    min-height: 1122.51px;
+                                                    max-height: 1122.51px;
+                                                    border:1px solid #000;
+                                                }
+                                                .confirmed {
+                                                    margin-top: 100px;
+                                                    margin-left: 100px;
+                                                }
+                                                .confirmed th, .confirmed td{
+                                                    padding:5px;
+                                                }
+                                                .sign td{
+                                                    font-weight: 700;
+                                                    font-size: 1.2em;
+                                                }
+                                                #tabel3 th{
+                                                    text-align: center;
+                                                    font-weight: 600;
+                                                    padding:5px;
+                                                }
+                                                #tabel3 td, #tabel7 td{
+                                                    padding:0 5px;
+                                                }
+                                                #tabel7 th{
+                                                    padding:5px 5px;
+                                                }
+                                                #BOQ th {
+                                                    text-align: center;
+                                                }
+                                                #BOQ th, #BOQ td {
+                                                    padding:0 5px;
+                                                }
+                                                .center-table td,
+                                                .center-table th{
+                                                    padding:5px;
+                                                    text-align: center;
+                                                }
+                                                .left-table {
+                                                    text-align: left;
+                                                }
+                                                table.paddingTable th, table.paddingTable td{
+                                                    padding:5px;
+                                                }
+                                                table.remarkTable th {
+                                                    height:40px;
+                                                }
+                                                table.sidePadding th, table.sidePadding td {
+                                                    padding:0 5px;
+                                                }
+                                            </style>
+
+                                            <section class="secPrint" id="13">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/xl-logo.png" alt="" class="logo-kiri" height="64">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/huawei-logo.png" alt="" class="logo-kanan" height="64">
+                                                <p style="margin-top:140px"></p>
+                                                <div style="margin-left: 100px">
+                                                    {# SINGLE TAB #}
+                                                    <img src="public/photo/{{ info[0].formId }}/{{ info[0].filename }}" height="300" width="600">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">1</td>
+                                                            <td class="center">Site Location</td>
+                                                            <td class="center">Photo of Overall Site View ( Zoom Out ).</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <p>&nbsp;</p>
+                                                    {# SINGLE TAB #}
+                                                    <img src="public/photo/{{ info[1].formId }}/{{ info[1].filename }}" height="300" width="600">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">2</td>
+                                                            <td class="center">GPS Coordinate</td>
+                                                            <td class="center">Photo of GPS showing Longitude and Lattitude on site</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                            <p style="margin-bottom:50px"></p>
+                                            {# Page 31 #}
+                                            <section class="secPrint" id="13">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/xl-logo.png" alt="" class="logo-kiri" height="64">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/huawei-logo.png" alt="" class="logo-kanan" height="64">
+                                                <p style="margin-top:140px"></p>
+                                                <div style="margin-left: 100px">
+                                                    {# SINGLE TAB #}
+                                                    <img src="public/photo/{{ info[2].formId }}/{{ info[2].filename }}" height="300" width="600">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">3</td>
+                                                            <td class="center">Cabinet and Tower</td>
+                                                            <td class="center">Photo of site compound showing cabinet &amp; tower</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <p>&nbsp;</p>
+                                                    {# DUAL TAB #}
+                                                    <img src="public/photo/{{ info[3].formId }}/{{ info[3].filename }}" height="200" width="300"><img src="public/photo/{{ info[4].formId }}/{{ info[4].filename }}" height="200" width="300">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">4</td>
+                                                            <td class="center">BTS Cabinet</td>
+                                                            <td class="center">Photo of overall BTS Close Door and Open Door (Cabinet showing all modules)</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                            <p style="margin-bottom:50px"></p>
+                                            {# Page 32 #}
+                                            <section class="secPrint" id="13">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/xl-logo.png" alt="" class="logo-kiri" height="64">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/huawei-logo.png" alt="" class="logo-kanan" height="64">
+                                                <p style="margin-top:140px"></p>
+                                                <div style="margin-left: 100px">
+                                                    {# DUAL TAB #}
+                                                    <img src="public/photo/{{ info[5].formId }}/{{ info[5].filename }}" height="200" width="300"><img src="public/photo/{{ info[6].formId }}/{{ info[6].filename }}" height="200" width="300">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">5</td>
+                                                            <td class="center">Overview of inside the cabinet</td>
+                                                            <td class="center">Photo of overall BTS cabinet showing all modules</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <p>&nbsp;</p>
+                                                    {# SINGLE TAB #}
+                                                    <img src="public/photo/{{ info[7].formId }}/{{ info[7].filename }}" height="300" width="600">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">6</td>
+                                                            <td class="center">FEP from Outside Cabinet</td>
+                                                            <td class="center">Photo of FEP from outside of cabinet (jumper bottom must installed first &amp; Use Macro Mode).</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                            <p style="margin-bottom:50px"></p>
+                                            {# Page 33 #}
+                                            <section class="secPrint" id="13">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/xl-logo.png" alt="" class="logo-kiri" height="64">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/huawei-logo.png" alt="" class="logo-kanan" height="64">
+                                                <p style="margin-top:140px"></p>
+                                                <div style="margin-left: 100px">
+                                                    {# SINGLE TAB #}
+                                                    <img src="public/photo/{{ info[8].formId }}/{{ info[8].filename }}" height="300" width="600">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">7</td>
+                                                            <td class="center">Jumper Installation Outdoor Cabinet</td>
+                                                            <td class="center">Photo of jumper bottom installation including labels, and connection between jumper &amp; feeder.</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <p>&nbsp;</p>
+                                                    {# SINGLE TAB #}
+                                                    <img src="public/photo/{{ info[9].formId }}/{{ info[9].filename }}" height="300" width="600">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">8</td>
+                                                            <td class="center">Feeder Bending</td>
+                                                            <td class="center">Photo of feeder bending at horizontal &amp; vertical tray. (Side view)</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                            <p style="margin-bottom:50px"></p>
+                                            {# Page 34 #}
+                                            <section class="secPrint" id="13">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/xl-logo.png" alt="" class="logo-kiri" height="64">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/huawei-logo.png" alt="" class="logo-kanan" height="64">
+                                                <p style="margin-top:140px"></p>
+                                                <div style="margin-left: 100px ">
+                                                    {# SINGLE TAB #}
+                                                    <img src="public/photo/{{ info[10].formId }}/{{ info[10].filename }}" height="300" width="600">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">9</td>
+                                                            <td class="center">EGB at Horizontal Tray</td>
+                                                            <td class="center">Photo of external grounding bar at horizontal tray, including the grounding cable connections and labels.</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <p>&nbsp;</p>
+                                                    {# SINGLE TAB #}
+                                                    <img src="public/photo/{{ info[11].formId }}/{{ info[11].filename }}" height="300" width="600">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">10</td>
+                                                            <td class="center">ACPDB Internal View</td>
+                                                            <td class="center">Photo of ACPDB, door of ACPDB must be open</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                            <section class="secPrint" id="13">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/xl-logo.png" alt="" class="logo-kiri" height="64">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/huawei-logo.png" alt="" class="logo-kanan" height="64">
+                                                <p style="margin-top:140px"></p>
+                                                <div style="margin-left: 100px ">
+                                                    {# SINGLE TAB #}
+                                                    <img src="public/photo/{{ info[12].formId }}/{{ info[12].filename }}" height="300" width="600">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">11</td>
+                                                            <td class="center">MCB at ACPDB</td>
+                                                            <td class="center">Photo of rectifier MCB ratings in ACPDB. (Macro mode)</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <p>&nbsp;</p>
+                                                    {# DUAL TAB #}
+                                                    <img src="public/photo/{{ info[13].formId }}/{{ info[14].filename }}" height="200" width="300"><img src="public/photo/{{ info[14].formId }}/{{ info[15].filename }}" height="200" width="300">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">12</td>
+                                                            <td class="center">Rectifier</td>
+                                                            <td class="center">Photo of rectifier. Rectifier’ door must be opened</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                            <section class="secPrint" id="13">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/xl-logo.png" alt="" class="logo-kiri" height="64">
+                                                <img src="{{ app.request.basepath }}/assets/dist/img/huawei-logo.png" alt="" class="logo-kanan" height="64">
+                                                <p style="margin-top:140px"></p>
+                                                <div style="margin-left: 100px ">
+                                                    {# SINGLE TAB #}
+                                                    <img src="public/photo/{{ info[15].formId }}/{{ info[15].filename }}" height="300" width="600">
+                                                    <p>&nbsp;</p>
+                                                    <table border="1" width="600">
+                                                        <thead>
+                                                        <tr style="background:#e9e9e9">
+                                                            <th class="center">No.</th>
+                                                            <th class="center">Photo File Name</th>
+                                                            <th class="center">Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="center">13</td>
+                                                            <td class="center">MCB at Rectifier Cabinet</td>
+                                                            <td class="center">Photo of the all the MCB in rectifier including labels. (Macro mode)</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </section>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block customJS %}
+    <script>
+        function print(printed) {
+            var isi = document.getElementById(printed);
+            var popupWin = window.open('', '_blank', 'width=1000,height=700');
+            popupWin.document.open()
+            // popupWin.document.write('<html><head><link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}assets/bootstrap/css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}assets/dist/css/global.css" /></head><body>' + isi.innerHTML + '</body></html>');
+            popupWin.document.write('<html><head><link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}assets/bootstrap/css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}assets/dist/fonts/font-awesome/css/font-awesome.min.css" /><link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}assets/dist/css/global.css" /></head><body  onload="window.print();window.close();">' + isi.innerHTML + '</body></html>');
+            popupWin.document.close();
+        }
+    </script>
+{% endblock %}

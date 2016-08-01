@@ -1,0 +1,107 @@
+{% extends 'layouts/head.twig' %}
+{% block content %}
+    <section id="content" class="table-layout animated fadeIn borderedBackground">
+        <div class="container-fluid">
+            <br>
+            <div class="row">
+                <div class="col-md-11 center-block">
+                    <p><strong>M-BTS PHOTO CHECKLIST (2G) OUTDOOR</strong></p>
+                </div>
+            </div>
+            <br>
+            <form enctype="application/json" action="siteDocumentationOutdoorAfter" method="post">
+                <div class="padding:30px 10px 10px 10px;background-color: #fff;margin-top: 10px;border:6px solid rgba(204, 204, 204,0.5)">
+                    <div class="panel panel-visible" id="spy2">
+                        <table class="table table-striped table-hover table-bordered" id="datatable2" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">
+                                        SITE : {{ infoSite.siteName }}
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: center;">Point</th>
+                                    <th style="text-align: center;">Item</th>
+                                    <th style="text-align: center;">2G</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Site Location</td>
+                                    <td><input type="checkbox" name="c[1]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>GPS Coordinate</td>
+                                    <td><input type="checkbox" name="c[2]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Cabinet and Tower</td>
+                                    <td><input type="checkbox" name="c[3]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>BTS Cabinet</td>
+                                    <td><input type="checkbox" name="c[4]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Overview of inside in the cabinet</td>
+                                    <td><input type="checkbox" name="c[5]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>FEP form Outside Cabinet</td>
+                                    <td><input type="checkbox" name="c[6]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Jumper Installation Outdoor Cabinet</td>
+                                    <td><input type="checkbox" name="c[7]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Feeder Bending</td>
+                                    <td><input type="checkbox" name="c[8]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>EGB at Horizontal Tray</td>
+                                    <td><input type="checkbox" name="c[9]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>ACPDB Internal View</td>
+                                    <td><input type="checkbox" name="c[10]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>MCB at ACPDB</td>
+                                    <td><input type="checkbox" name="c[11]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>Rectifier</td>
+                                    <td><input type="checkbox" name="c[12]" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>MCB at Rectifier Cabinet</td>
+                                    <td><input type="checkbox" name="c[13]" value="1"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <div class="row" style="margin-right: 30px;">
+                            <div class="col-md-10">&nbsp;</div>
+                            <div class="col-md-2"><input type="submit" class="btn btn-primary btn-block btn-flat" value="SUBMIT"></div>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}
